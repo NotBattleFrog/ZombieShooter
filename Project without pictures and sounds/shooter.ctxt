@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=shooter
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ shooter\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=damage\ speed\ rotate
+comment1.target=shooter(int,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ action()
+comment4.params=
+comment4.target=void\ checkHit()
+numComments=5
