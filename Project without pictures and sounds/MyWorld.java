@@ -36,7 +36,6 @@ public class MyWorld extends World
  static int score;
  GreenfootSound dead = new GreenfootSound("dead.mp3");
   GreenfootSound inc = new GreenfootSound("horde.mp3");
-    GreenfootSound zs = new GreenfootSound("zs.mp3");
     public MyWorld(int diff)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -80,9 +79,6 @@ public class MyWorld extends World
             spwnMelee(n);
             
         }
-        if(time%240==0){
-             // zs.play();
-        }
         Supp();
         time++;
        spti++;
@@ -91,16 +87,17 @@ public class MyWorld extends World
     else{
             spti=0;
        if(getObjects(Enemy.class).isEmpty()){
-                         showText("Shop time  "+(shop/60),500,250);
+           
            show();
            shop++; 
         }
-                      showText("",500,250);
+                     
     } 
     }
     
     public void show(){   
         if(getObjects(Shop.class).isEmpty()){
+            showText("Shop time  "+(10-(shop/60)),90,350);
                x.Hp = x.Fullhp;
             addObject(kk = new Shop(),100,500); 
         }
@@ -109,7 +106,7 @@ public class MyWorld extends World
                     shop=0;
                     time=0;
                     wve++;
-                 
+                     showText(" ",90,500);
                     red=true;
                 }    
     }
