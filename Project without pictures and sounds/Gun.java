@@ -17,8 +17,6 @@ public class Gun extends Actor
     int totalmag;
     int bull;
    static int totalbull;
-   GreenfootSound No = new GreenfootSound("off.mp3");
-     GreenfootSound Re = new GreenfootSound("Reload.mp3");
     public Gun(int mag,int bull,int totalbull,int totalmag){
          this.mag=mag;
           this.bull=bull;
@@ -29,10 +27,10 @@ public class Gun extends Actor
         if(bull!=totalbull&&mag>0){
             bull=totalbull;
             mag--;
-            Re.play();
+            Greenfoot.playSound("Reload.wav");
         }
         else{
-            No.play();
+             Greenfoot.playSound("off.mp3");
         }
     }
     public void Fire(){

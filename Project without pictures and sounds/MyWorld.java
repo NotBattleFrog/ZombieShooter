@@ -79,7 +79,9 @@ public class MyWorld extends World
             spwnMelee(n);
             
         }
+        else{
         Supp();
+    }
         time++;
        spti++;
     
@@ -89,15 +91,15 @@ public class MyWorld extends World
        if(getObjects(Enemy.class).isEmpty()){
            
            show();
-           shop++; 
+   
         }
                      
     } 
     }
     
-    public void show(){   
+    public void show(){  
+                    showText("Shop time  "+(10-(shop/60)),90,200);
         if(getObjects(Shop.class).isEmpty()){
-            showText("Shop time  "+(10-(shop/60)),90,350);
                x.Hp = x.Fullhp;
             addObject(kk = new Shop(),100,500); 
         }
@@ -106,9 +108,10 @@ public class MyWorld extends World
                     shop=0;
                     time=0;
                     wve++;
-                     showText(" ",90,500);
+                     showText("Shop closed  ",90,200);
                     red=true;
-                }    
+                }  
+                        shop++; 
     }
     
     public void Nextw(int n){
@@ -149,7 +152,7 @@ public class MyWorld extends World
     
     public void Supp(){
         if(spti>=240){
-            if(Greenfoot.getRandomNumber(2)==1){
+            if(Greenfoot.getRandomNumber(2)==0){
             addObject(new SupplyCrate(),Greenfoot.getRandomNumber(1500),Greenfoot.getRandomNumber(850));
         }
             spti=0;
