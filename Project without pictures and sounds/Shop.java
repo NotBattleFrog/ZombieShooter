@@ -39,7 +39,7 @@ public Shop(){
                    if(MyWorld.money>=500){
                        getWorld().showText("Item bought!!!!" ,getWorld().getWidth()/2,getWorld().getHeight()/2);
                    MyWorld.x.Usp.totalmag++;
-                  MyWorld.money-=200;
+                  MyWorld.money-=500;
                     gg=0;
                 }
                          else{
